@@ -1,0 +1,33 @@
+@import ".../../../../scss/variables";
+@import "../../scss/buttons";
+
+.classvolunteerslist-container {
+  min-height: calc(100vh - 270px);
+  margin: auto;
+  width: 80%;
+  animation: FadeIn 500ms;
+  font-family: $default-font-family;
+  font-size: 0.75em;
+  font-weight: 400;
+
+  &:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+.volunteerslist-title {
+  font-family: $default-font-family;
+  font-weight: 300;
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.btn-cancel-volunteer {
+  @extend %btn-outline-danger;
+  padding: 10px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}

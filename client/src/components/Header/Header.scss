@@ -1,0 +1,86 @@
+@import "./../../scss/variables";
+
+.header {
+  position: sticky;
+  height: 160px;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+.header-firtchild,
+.header-secondchild {
+  height: 90px;
+  width: 100%;
+  display: flex;
+}
+.header-secondchild {
+  height: 70px;
+  background-color: #efefef;
+}
+.header-logo {
+  font-family: "Alfa Slab One", cursive;
+  font-size: larger;
+  margin-top: 27px;
+  margin-left: 15%;
+  height: 60px;
+  width: fit-content;
+  text-align: right;
+  color: $logo-dark-color;
+  margin-right: 20px;
+  transition: 200ms;
+  text-decoration: none;
+}
+.header-logo:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.header-logo div {
+  height: 15px;
+  display: flex;
+  align-items: center;
+}
+.header-logo div P:nth-child(2) {
+  font-size: 20px;
+  color: $logo-light-color;
+}
+.header-nav,
+.home-titel {
+  color: #3f3f3f;
+  margin-top: 15px;
+  margin-left: 17%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  transition: 200ms;
+  text-decoration: none;
+}
+.home-titel{
+  font-size: 16px;
+  font-weight: 600;
+  font-family: $default-font-family;
+}
+.home-titel img {
+  margin-right: 10px;;
+  width: 32px;
+  height: 32px;
+}
+.header-nav:hover {
+  color: $header-nav-text-hover;
+  cursor: pointer;
+}
+.header-nav p:nth-child(2) {
+  margin-left: 10px;
+  font-size: 14px;
+  font-family: $default-font-family;
+  font-weight: 600;
+}
+.header-nav:nth-child(2),
+.header-nav:nth-child(3) {
+  margin-left: 50px;
+}
+.header-selected {
+  color: $header-nav-text-selected;
+  cursor: default;
+}
