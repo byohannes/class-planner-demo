@@ -5,7 +5,8 @@ import {
   ACTION_SUCCESS,
   ACTION_ERROR,
 } from "./types";
-import httpClient from "../../common/httpClient/httpClient.js";
+import axios from "axios"; 
+//import httpClient from "../../common/httpClient/httpClient.js";
 
 export const createBooking = (newBookingData) => {
   return async (dispatch) => {
@@ -14,7 +15,7 @@ export const createBooking = (newBookingData) => {
         type: ACTION_STARTED,
         actionType: CREATE_BOOKING,
       });
-      const newBooking = await httpClient.post(`/api/v1/bookings`, {
+      const newBooking = await axios.post(`/api/v1/bookings`, {
         ...newBookingData,
       });
       dispatch({
@@ -41,7 +42,7 @@ export const Get_BookingByClassId = (classId) => {
         type: ACTION_STARTED,
         actionType: GET_BOOKING_BY_CLASSID,
       });
-      const bookings = await httpClient.get(
+      const bookings = await axios.get(
         `/api/v1/class/bookings/${classId}`
       );
       dispatch({
