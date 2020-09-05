@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 import { createBooking } from "../../redux/actions";
 import { useForm } from "react-hook-form";
 import "./NewBookingForm.scss";
-import rolesData from "../../data/roles.json";
-import Alert from "../Alert/Alarm.jsx";
+import rolesData from "./../../data/roles.json";
+import Alert from "../../components/Alert/Alarm.jsx";
 import dayjs from "dayjs";
 
 const mapStateToProps = (state) => {
