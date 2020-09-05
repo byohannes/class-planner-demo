@@ -5,9 +5,7 @@ import {
   ACTION_ERROR,
 } from "./types";
 //import httpClient from "../../common/httpClient/httpClient.js";
-
-import axios from "axios"; 
-
+import axios from "axios";
 
 export const Get_Courses = () => {
   return async (dispatch) => {
