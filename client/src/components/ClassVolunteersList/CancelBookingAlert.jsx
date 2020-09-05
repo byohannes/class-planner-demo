@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import httpClient from "../../common/httpClient/httpClient.js";
+//import httpClient from "../../common/httpClient/httpClient.js";
+import axios from "axios";
+
 import "./CancelBookingAlert.scss";
 
 const CancelBookingAlert = ({
@@ -22,7 +24,7 @@ const CancelBookingAlert = ({
   }
 
   function deleteBooking() {
-    httpClient
+    axios
       .delete(`/api/v1/bookings/${_id}`)
       .then(function (response) {
         if (response.data.success === true) {
