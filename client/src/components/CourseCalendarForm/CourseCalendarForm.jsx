@@ -4,6 +4,7 @@ import Loading from "../../components/Loading/Loading.jsx";
 import { connect } from "react-redux";
 //import httpClient from "../../common/httpClient/httpClient.js";
 import axios from "axios";
+
 import { MonthNames } from "../../utils/MonthNames";
 import dayjs from "dayjs";
 import "./CourseCalendarForm.scss";
@@ -57,13 +58,12 @@ const CourseCalendarForm = ({ pageData }) => {
     get_Classes_OnLoading();
     get_Classes_OnLoaded();
   }, [get_Classes_OnLoading, get_Classes_OnLoaded]);
-  console.log("0");
   return (
     <div className="coursecalendarform-container">
-      <p className="upcoming-class-title">
-        <p>{pageData.city}</p> <i class="fas fa-chevron-right"></i>
+      <div className="upcoming-class-title">
+        <p>{pageData.city}</p> <i className="fas fa-chevron-right"></i>
         <p>{pageData.title}</p>
-      </p>
+      </div>
       <div className="filter-container">
         <div className="control-container">
           <label>Intake: </label>

@@ -36,7 +36,6 @@ const ClassCard = ({
       const bookings = await axios.get(
         `/api/v1/class/bookings/${currentClass._id}`
       );
-      console.log(bookings.data.data);
       setCurrentBooking(bookings.data.data);
     }
   }, [currentClass]);

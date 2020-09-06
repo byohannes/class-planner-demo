@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 //import httpClient from "../../common/httpClient/httpClient.js";
 import axios from "axios";
-
 import "./CancelBookingAlert.scss";
 
 const CancelBookingAlert = ({

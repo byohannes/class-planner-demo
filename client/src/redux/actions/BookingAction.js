@@ -7,7 +7,6 @@ import {
 } from "./types";
 //import httpClient from "../../common/httpClient/httpClient.js";
 import axios from "axios";
-
 export const createBooking = (newBookingData) => {
   return async (dispatch) => {
     try {
